@@ -4,7 +4,7 @@
 #PBS -l select=1:ncpus=10:ompthreads=1:mem=100gb
 #PBS -m bea
 
-REPO_PATH=/rds/general/user/sd121/home/bayes-rate-consistency
+REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 MODEL="hsgp-eq-lrd"
 WAVES=5
 HSGP_C=1.5
