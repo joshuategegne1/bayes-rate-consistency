@@ -36,7 +36,7 @@ option_list <- list(
   optparse::make_option("--hsgp_m2", type = "integer", default = 20,
                         help = "The number of the HSGP basis functions for the contacts' age dimension [default \"%default\"]",
                         dest = "hsgp_m2"),
-  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/sd121/home/bayes-rate-consistency",
+  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/jt1319/home/bayes-rate-consistency",
                         help = "Absolute file path to repository directory, used as long we don t build an R package [default]",
                         dest = 'repo.path'),
   optparse::make_option("--waves", type = "integer", default = 5,
