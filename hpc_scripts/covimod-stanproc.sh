@@ -4,9 +4,9 @@
 #PBS -l select=1:ncpus=10:ompthreads=1:mem=100gb
 #PBS -m bea
 
-REPO_PATH=/rds/general/user/sd121/home/covimod-gp
-MODEL="hsgp-m52-lrd"
-WAVES=2
+REPO_PATH=/rds/general/user/sd121/home/bayes-rate-consistency
+MODEL="hsgp-eq-lrd"
+WAVES=5
 HSGP_C=1.5
 HSGP_M1=40
 HSGP_M2=30
