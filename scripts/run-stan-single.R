@@ -32,7 +32,7 @@ option_list <- list(
   optparse::make_option("--hsgp_m", type = "integer", default = 20,
                         help = "The number of the HSGP basis functions in any dimension [default \"%default\"]",
                         dest = "hsgp_m"),
-  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/sd121/home/covimod-gp",
+  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/jt1319/home/bayes-rate-consistency",
                         help = "Absolute file path to repository directory, used as long we don t build an R package [default]",
                         dest = 'repo.path'),
   optparse::make_option("--wave", type = "integer", default = 1,
