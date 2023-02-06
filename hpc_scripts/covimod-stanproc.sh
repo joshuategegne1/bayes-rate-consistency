@@ -8,7 +8,7 @@ REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 MODEL="hsgp-eq-lrd"
 WAVES=5
 HSGP_C=1.5
-HSGP_M1=40
+HSGP_M1=30
 HSGP_M2=30
 
 module load anaconda3/personal
