@@ -1,13 +1,13 @@
 #!/bin/sh
 
-#PBS -l walltime=08:00:00
-#PBS -l select=1:ncpus=10:mem=512gb
+#PBS -l walltime=23:59:59
+#PBS -l select=1:ncpus=8:mem=64gb
 
 REPO_PATH=/rds/general/user/sd121/home/covimod-gp
-MODEL="hsgp-m52-lrd-noadj"
+MODEL="hsgp-eq-lrd"
 WAVES=5
-MIXING=FALSE
-PPC=FALSE
+MIXING=TRUE
+PPC=TRUE
 PLOT=TRUE
 
 module load anaconda3/personal
