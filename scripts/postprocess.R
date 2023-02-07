@@ -15,10 +15,10 @@ library(pammtools)
 
 ##### ---------- I/O ---------- #####
 option_list <- list(
-  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/sd121/home/covimod-gp",
+  optparse::make_option("--repo_path", type = "character", default = "/rds/general/user/jt1319/home/bayes-rate-consistency",
                         help = "Absolute file path to repository directory, used as long we don t build an R package [default]",
                         dest = 'repo.path'),
-  optparse::make_option("--model", type = "character", default = NA_character_,
+  optparse::make_option("--model", type = "character", default = "hsgp-eq-lrd",
                         help = "Name of the model",
                         dest = "model.name"),
   optparse::make_option("--waves", type = "integer", default = 5,
