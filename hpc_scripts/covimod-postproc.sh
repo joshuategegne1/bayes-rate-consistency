@@ -3,7 +3,7 @@
 #PBS -l walltime=23:59:59
 #PBS -l select=1:ncpus=8:mem=64gb
 
-REPO_PATH=/rds/general/user/sd121/home/covimod-gp
+REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 MODEL="hsgp-eq-lrd"
 WAVES=5
 MIXING=TRUE
