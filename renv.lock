@@ -2312,21 +2312,6 @@
       "Hash": "458bb38374d73bf83b1bb85e353da200",
       "Requirements": []
     },
-    "cmdstanr": {
-      "Package": "cmdstanr",
-      "Version": "0.5.2",
-      "Source": "unknown",
-      "Hash": "cf82412f07ef8541ca40ed21593895e5",
-      "Requirements": [
-        "R6",
-        "checkmate",
-        "data.table",
-        "jsonlite",
-        "posterior",
-        "processx",
-        "withr"
-      ]
-    },
     "zoo": {
       "Package": "zoo",
       "Version": "1.8-9",
