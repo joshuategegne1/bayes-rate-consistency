@@ -401,6 +401,21 @@
       "Hash": "ce49bfe5bc0b3ecd43a01fe1b01c2243",
       "Requirements": []
     },
+    "cmdstanr": {
+      "Package": "cmdstanr",
+      "Version": "0.5.2",
+      "Source": "unknown",
+      "Hash": "cf82412f07ef8541ca40ed21593895e5",
+      "Requirements": [
+        "R6",
+        "checkmate",
+        "data.table",
+        "jsonlite",
+        "posterior",
+        "processx",
+        "withr"
+      ]
+    },
     "cmprsk": {
       "Package": "cmprsk",
       "Version": "2.2-11",
