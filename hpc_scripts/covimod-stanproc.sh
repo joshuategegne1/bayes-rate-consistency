@@ -1,20 +1,20 @@
 #!/bin/sh
 
 #PBS -l walltime=23:59:59
-#PBS -l select=1:ncpus=8:ompthreads=1:mem=32gb
+#PBS -l select=1:ncpus=6:ompthreads=1:mem=32gb
 #PBS -m bea
 
 REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
-MODEL="hsgp-eq-lrd"
+MODEL="hsgp-eq-lrd-age"
 WAVES=5
 HSGP_C=1.5
 HSGP_M1=30
 HSGP_M2=30
 
 # HMC Sampler params
-CHAINS=8
-WARMUP= 125
-SAMPLING= 500
+CHAINS=4
+WARMUP= 200
+SAMPLING= 600
 
 module load anaconda3/personal
 source activate Renv
