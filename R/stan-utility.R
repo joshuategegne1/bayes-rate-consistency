@@ -129,7 +129,8 @@ add_row_major_idx <- function(stan_data, contacts, survey = "COVIMOD"){
     f = stan_data$ROW_MAJOR_IDX_F - 1
     stan_data$ROW_MAJOR_IDX_M_AGE <- 1 + (m - m%%13)/13
     stan_data$ROW_MAJOR_IDX_F_AGE <- 1 + (f - f%%13)/13
-    
+    stan_data$ROW_MAJOR_IDX_M_STRATA <- 1 + m %% 13
+    stan_data$ROW_MAJOR_IDX_F_STRATA <- 1 + f %% 13    
     return(stan_data)
   }
 
