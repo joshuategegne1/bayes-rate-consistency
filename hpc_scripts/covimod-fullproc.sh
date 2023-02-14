@@ -12,8 +12,8 @@ HSGP_M2=30
 
 # HMC Sampler params
 CHAINS=8
-WARMUP=500
-SAMPLING=500
+WARMUP=4
+SAMPLING=20
 
 module load anaconda3/personal
 source activate Renv
