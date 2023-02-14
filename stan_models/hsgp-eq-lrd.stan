@@ -196,6 +196,8 @@ model {
 
 generated quantities {
   // Predicted coarse-strata contacts
+  
+  array[N] real log_lik;
   array[N] int yhat_strata;
 
   {
