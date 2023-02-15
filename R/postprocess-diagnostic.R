@@ -17,19 +17,19 @@ make_convergence_diagnostic_stats <- function(fit, outdir = NA) {
   sampler_diagnostics <- fit$diagnostic_summary()
   
   # Compute WAIC and LOO
-  tryCatch({
-    log_lik <- fit$draws("log_lik", format = "matrix")
-
-    n_inf_log_lik <- sum(is.infinite(log_lik))
-    if(n_inf_log_lik > 0){
-      .message <- paste("Detected", n_inf_log_lik, "Inf values in log_lik. Removing those iterations.")
-      warning(.message)
-      log_lik[is.infinite(log_lik)] <- NA
-    }
+  
+  log_lik <- fit$draws("log_lik", format = "matrix")
+  print(log_lik)
+  n_inf_log_lik <- sum(is.infinite(log_lik))
+  if(n_inf_log_lik > 0){
+    .message <- paste("Detected", n_inf_log_lik, "Inf values in log_lik. Removing those iterations.")
+    warning(.message)
+    log_lik[is.infinite(log_lik)] <- NA}
+  
     log_lik <- na.omit(log_lik)
     WAIC <- loo::waic(log_lik)
     LOO <- loo::loo(log_lik)
-  }, error = function(e) e)
+ 
 
   # Time of execution
   time <- fit$time()
