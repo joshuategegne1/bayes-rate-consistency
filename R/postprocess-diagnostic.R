@@ -37,6 +37,8 @@ make_convergence_diagnostic_stats <- function(fit, outdir = NA) {
   # save
   if(!is.na(outdir)){
     saveRDS(fit_summary, file = file.path(outdir, "fit_summary.rds"))
+    saveRDS(WAIC, file = file.path(outdir, "WAIC.rds"))
+    saveRDS(LOO, file = file.path(outdir, "LOO.rds"))
     saveRDS(sampler_diagnostics, file = file.path(outdir, "sampler_diagnostics.rds"))
     saveRDS(time, file = file.path(outdir, "time_elapsed.rds"))
   } else {
