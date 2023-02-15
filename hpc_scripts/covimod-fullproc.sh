@@ -12,7 +12,7 @@ HSGP_M2=30
 
 # HMC Sampler params
 CHAINS=8
-WARMUP=50
+WARMUP=250
 SAMPLING=100
 
 module load anaconda3/personal
