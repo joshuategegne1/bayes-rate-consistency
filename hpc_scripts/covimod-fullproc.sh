@@ -5,7 +5,7 @@
 
 REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 WAVES=5
-MODEL="hsgp-eq-lrd-strata"
+MODEL="hsgp-eq-lrd-time"
 HSGP_C=1.5
 HSGP_M1=30
 HSGP_M2=30
