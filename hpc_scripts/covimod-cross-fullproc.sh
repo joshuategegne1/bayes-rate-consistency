@@ -5,8 +5,11 @@
 
 REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 WAVES=5
+MODEL="hsgp-eq-lrd-age"
+MODEL=${MODEL}-${WAVES}
+
 
 module load anaconda3/personal
 source activate Renv
 
-Rscript $REPO_PATH/scripts/loo-compare.R --waves $WAVES
+Rscript $REPO_PATH/scripts/loo-compare.R --waves $WAVES --model $MODEL
