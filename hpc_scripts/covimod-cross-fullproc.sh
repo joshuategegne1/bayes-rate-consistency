@@ -12,4 +12,4 @@ MODEL=${MODEL}-${WAVES}
 module load anaconda3/personal
 source activate Renv
 
-Rscript $REPO_PATH/scripts/loo-compare.R --waves $WAVES --model $MODEL
+Rscript $REPO_PATH/scripts/rep-fatigue.R --waves $WAVES --model $MODEL
