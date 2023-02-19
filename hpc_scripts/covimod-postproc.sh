@@ -1,10 +1,10 @@
 #!/bin/sh
 
-#PBS -l walltime=23:59:59
-#PBS -l select=1:ncpus=4:mem=64gb
+#PBS -l walltime=06:00:00
+#PBS -l select=1:ncpus=10:mem=100gb
 
 REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
-MODEL="hsgp-eq-lrd-cnst"
+MODEL="hsgp-eq-lrd-age"
 WAVES=5
 MIXING=TRUE
 PPC=TRUE
