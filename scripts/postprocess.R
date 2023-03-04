@@ -128,6 +128,7 @@ if(args$plot){
       # Plot betas
       plot_time_effects(po, export.path)
       plot_repeated_response_effects(po, export.path)
+      saveRDS(fit$draws(c("rho"), inc_warmup = FALSE, format="draws_matrix"), file = file.path(outdir, "rho_matrix.rds"))
       plot_time_repeat_pairs(po, export.path)
       po_tr <- subset_draws(po, variable = c("tau", "rho"), regex = TRUE)
       time_rep_summary <- summarise_draws(po_tr, ~quantile(.x, probs = c(0.025, 0.25, 0.5, 0.75, 0.975)))
