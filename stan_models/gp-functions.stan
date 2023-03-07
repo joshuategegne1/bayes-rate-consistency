@@ -194,6 +194,7 @@ matrix gp2d_matern52_restruct(array[] real x1, array[] real x2,
   * @param z:
   * @return A two dimensional Gaussian process fuction
   */
+  
 matrix hsgp(int A, real alpha, real rho1, real rho2, real L1, real L2, int M1, int M2,
             matrix PHI1, matrix PHI2, matrix z)
 {
@@ -208,6 +209,33 @@ matrix hsgp(int A, real alpha, real rho1, real rho2, real L1, real L2, int M1, i
 
   return(f);
 }
+
+/**  2D HSGP for strata
+  *
+  * @param A: Number of ages for particiapnts
+  * @param alpha: GP scaling parameter
+  * @param rho1, rho2: GP length-scale parameter on participants and contacts age dimensions
+  * @param L1, L2: HSGP parameters
+  * @param M1, M2: HSGP parameters
+  * @param z:
+  * @return A two dimensional Gaussian process fuction
+  */
+  
+matrix hsgp_c(int A, int C, real alpha, real rho1, real rho2, real L1, real L2, int M1, int M2,
+            matrix PHI1, matrix PHI2, matrix z)
+{
+  vector[M1] sqrt_spd_1 = diagSPD_EQ(alpha, rho1, L1, M1);
+  vector[M2] sqrt_spd_2 = diagSPD_EQ(alpha, rho2, L2, M2);
+
+  matrix[A,C] f = kron_mvprod(
+    diag_post_multiply( PHI1, sqrt_spd_1 ),
+    diag_post_multiply( PHI2, sqrt_spd_2 ),
+    z
+  );
+
+  return(f);
+}
+
 
 /** Hilbert Space approximate 2D Gaussian process (Matern 3/2)
   *
