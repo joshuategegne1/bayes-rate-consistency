@@ -428,6 +428,7 @@ add_nn_idx <- function(stan_data){
 # Add standardized age index
 add_std_age_idx <- function(stan_data){
   A <- stan_data$A
+  C <- stan_data$C
 
   age_idx <- seq.int(0,A-1,1)
   diff_idx <- seq.int(-A+1, A-1, 1)
