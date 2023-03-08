@@ -432,7 +432,7 @@ add_std_age_idx <- function(stan_data){
 
   age_idx <- seq.int(0,A-1,1)
   diff_idx <- seq.int(-A+1, A-1, 1)
-  strata_idx <- seq.int(0, C, 1)
+  strata_idx <- seq.int(0, C-1, 1)
 
   age_idx_std <- (age_idx - mean(age_idx))/sd(age_idx)
   diff_idx_std <- (diff_idx - mean(diff_idx))/sd(diff_idx)
