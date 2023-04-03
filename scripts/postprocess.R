@@ -121,19 +121,19 @@ if(args$plot){
   # gp_parms_summary <- summarise_draws(po_gp, ~quantile(.x, probs = c(0.025, 0.25, 0.5, 0.75, 0.975)))
   # saveRDS(gp_parms_summary, file = file.path(export.path, "gp_parms_summary.rds"))
   
-  cat(" Extracting posterior contact intensities ...\n")
-  dt.po <- extract_posterior_intensity(po, dt.pop)
-
-  dt.matrix <- summarise_posterior_intensity(dt.po, type="matrix", outdir=export.path)
-  dt.sliced <- summarise_posterior_intensity(dt.po, dt.off, type="sliced", outdir=export.path)
-  dt.margin.a <- summarise_posterior_intensity(dt.po, type="margin-a", outdir=export.path)
-  dt.margin.b <- summarise_posterior_intensity(dt.po, type="margin-b", outdir=export.path)
-  #dt.margin.c <- summarise_posterior_intensity(dt.po, dt.off, type="margin-c", outdir=export.path)
-  
 
   po <- tryCatch(
     { # If time effects are present
       po <- fit$draws(c("log_cnt_rate", "tau", "rho"), inc_warmup = FALSE, format="draws_matrix")
+      
+      cat(" Extracting posterior contact intensities ...\n")
+      dt.po <- extract_posterior_intensity(po, dt.pop)
+      dt.matrix <- summarise_posterior_intensity(dt.po, type="matrix", outdir=export.path)
+      dt.sliced <- summarise_posterior_intensity(dt.po, dt.off, type="sliced", outdir=export.path)
+      dt.margin.a <- summarise_posterior_intensity(dt.po, type="margin-a", outdir=export.path)
+      dt.margin.b <- summarise_posterior_intensity(dt.po, type="margin-b", outdir=export.path)
+      #dt.margin.c <- summarise_posterior_intensity(dt.po, dt.off, type="margin-c", outdir=export.path)      
+      
       cat(" Plotting time and repeat effects ...\n")
       # Plot betas
       plot_time_effects(po, export.path)
