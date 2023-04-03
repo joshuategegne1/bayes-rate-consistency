@@ -6,8 +6,8 @@
 REPO_PATH=/rds/general/user/jt1319/home/bayes-rate-consistency
 MODEL="hsgp-eq-lrd-age-2dgp"
 WAVES=5
-MIXING=TRUE
-PPC=TRUE
+MIXING=FALSE
+PPC=FALSE
 PLOT=TRUE
 
 module load anaconda3/personal
